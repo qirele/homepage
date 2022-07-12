@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body
+{
+    color: #7f0d4f;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    z-index: 500;
+}
+
+.nav-links li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #e6bfd4;
+    height: 70px;
+    line-height: 70px;
+    padding: 0 12px;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+  background:#700c46;
+}
+.nav-links li a:active {
+  background: red;
+}
+
+nav {
+    display: flex;
+    background: #560B37;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 100;
+}
+
+.burger {
+    display: none;
+    height: 70px;
+    line-height: 70px;
+
+
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background: #e6bfd4;
+    margin: 2px;
+}
+
+main, footer {
+    /*background: #f2feed;*/
+    margin: 0 auto;
+    width: 90vw;
+    padding: 0px 10px 10px 10px;
+}
+
+.about {
+    font-size: 27px;
+}
+
+@media screen and (max-width: 700px) {
+
+    main {
+        margin-top: 35px;
+    }
+    nav {
+        align-items: center;
+        position: fixed;
+        height: 35px;
+    }
+
+    .nav-links {
+        font-size: 20px;
+        position: fixed;
+        right: 0px;
+        top: 34px;
+        height: 400px;
+        background: #890e56;
+        flex-direction: column;
+        width: 60%;
+        transform: translateX(101%);
+        transition: transform 0.5s ease-in;
+        justify-content: space-around;
+    }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .jumbotron-flexing {
+        flex-direction: column;
+    }
+
+    #memes {
+        flex-direction: column;
+    }
+    .about {
+        font-size: 18px;
+    }
+
+    .contact {
+        flex-direction: column;
+        margin: auto;
+    }
+    .contact img {
+        max-width: 150px;
+        margin: auto;
+    }
+
+}
+
+@media screen and (max-height: 500px){
+    .nav-links {
+        height: 250px;
+
+    }
+    .nav-links li a {
+        line-height: 0px;
+        height: 35px;
+    }
+
+}
+
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+
+
+.jumbotron-fluid {
+    padding: 0px 0px 0px 25px;
+}
+
+.jumbotron-flexing {
+    display: flex;
+    gap: 20px;
+    padding-top: 50px;
+}
+
+.jumbotron-flexing > div {
+    flex-basis: 100%;
+}
+
+.list-group-item.active {
+    background: #7f0d4f;
+    border-color: #7f0d4f;
+}
+
+
+
+.memeHeight {
+    max-height: 300px;
+
+}
+
+.contact img {
+    max-height: 250px;
+    display: block;
+}
+
+
+.contact {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+/* modal img on gallery.html
+    source: https://www.w3schools.com/howto/howto_css_modal_images.asp
+*/
+
+#memes img {
+    cursor: pointer;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  max-height: 700px;
+}
+
+#closeButton {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* about me center vertically and horizontally */
+
+.about {
+    max-width: 700px;
+    margin: 0 auto;
+}
